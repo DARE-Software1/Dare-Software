@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 
+    DARE staff Login
+    </title>
+    <meta name="description" content="Staff login for DARE software.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+<style>
+body {
+  background-color: lightcoral;}
+    
+    input [type=text], input[type=password] {
+        width: 172px;
+        height: 15px;
+        padding: 10px 10px;
+        margin: 1px 0px;
+        display: inline-block;
+        box-sizing: border-box;
+        
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding; 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 150px;
+        
+        
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    
+    .container {
+        padding: 8px;
+        text-align: center;
+    }
+    
+    .span {
+        padding-top: 16px;
+        text-align: center;
+    }
+    
+h1 {
+  color: black;
+  text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+</style>
+    <body>
+    <h1> Oakland University <br> D.A.R.E staff login </h1>
+    <img src ="DARE.png" alt= "DARE" width="500" height ="300">
+  <form action="/action_page.php" method="post">
+  
+  <div class="container">
+    <label for="uname"><b>Username</b></label> <br>
+    <input type="text" placeholder="Enter Username" name="uname" required> <br>
+
+    <label for="psw"><b>Password</b></label> <br>
+    <input type="password" placeholder="Enter Password" name="psw" required> <br>
+        
+    <button type="submit">Login</button> <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+    <div class="span">Forgot <a href="#">password?</a></div>
+  
+</form>
+<img src="Grizzly.png" alt="Grizzly" width="400" height="300">
+    </body>
+    
+
+</html>
