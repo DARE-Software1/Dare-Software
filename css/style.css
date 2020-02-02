@@ -1,0 +1,39 @@
+
+.column{
+    float: left;
+    width: 25%;
+    column-count: 3;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navbar{
+   overflow: hidden;
+   background-color: darkslategrey;
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.navbar.a:hover{
+    background-color: aqua;
+    color: black;
+}
+
+.body{
+    margin-top: 60px
+}
+.header{
+    margin-top: 60px;
+}
