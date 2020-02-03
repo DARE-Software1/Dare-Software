@@ -1,8 +1,11 @@
 
 .column{
     float: left;
-    width: 25%;
+    width: 300px;
+    text-align: center;
     column-count: 3;
+    height: 1000px;
+    
 }
 
 .row:after{
@@ -32,8 +35,8 @@
 }
 
 .body{
-    margin-top: 60px
+    
 }
 .header{
-    margin-top: 60px;
+    
 }
