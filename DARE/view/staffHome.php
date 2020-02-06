@@ -32,8 +32,7 @@
 
                 <h2>
 
-         The Easy Way to Manage Grades
-   
+        Welcome to the dishing out of grades
                     <br>
 <br>
                 <img src="img/work.jpg">
@@ -53,5 +52,14 @@
     <?php include 'view/footer.php'; ?>
 
 </html>
+
+
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 

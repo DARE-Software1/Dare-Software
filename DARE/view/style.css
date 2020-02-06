@@ -55,7 +55,7 @@ nav{
 nav ul{
     margin: 0px 100px 0px 100px;
     padding: 20px;
-   
+  
 }
 /* make the items float left in a line */
 nav li {
@@ -69,13 +69,16 @@ nav li {
 nav a{
     color: #000000;
     font-size:18px;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
     text-decoration: none;
     border-radius: 20px;
     background-color: white;
     padding-top: 8px;
     padding-bottom: 8px;
+    width: 25%;
+  
+
 }
 nav button{
     background: white;
@@ -103,6 +106,12 @@ nav a:hover{
     transition: .5s;
 
 }
+
+
+
+
+/* sudent Nav*/
+
 
 
 
@@ -230,6 +239,15 @@ background: rgba(0,0,0,.3);
     background: none;
     border-color: #3a4460;
 }
+
+
+
+
+
+
+/*student pages*/
+
+
 
 
 

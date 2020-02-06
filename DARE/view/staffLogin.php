@@ -8,18 +8,18 @@
 
     </title>
 
-    <link rel="stylesheet" href="view/style.css">
+    <link rel=stylesheet href="view/style.css">
 </head>
 
- <?php include 'view/header.php'; ?>
+<body>
+ <?php include 'header.php'; ?>
   
   
-  
+  <div class="nav">
    
-   <?php include 'view/nav.php'; ?>
- 
-  <body>
-
+    <?php include 'nav.php'; ?>
+  </div>
+  
   
     <!-- navigation bar-->
     
@@ -36,18 +36,19 @@
 
                  <h1>Staff Log-in</h1>
 
-                      
+                 <form action="index.php" method="post">
                         <label for="uname"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="uid" required>
                         <br>
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="pwd" required>
-                        <br><input type="hidden" name="action" value="pLogIn">
-                        <button type="submit">Login</button><br> 
+                        <br><input type="hidden" name="action" value="stLogIn">
+                        <button type="submit" >Login</button><br> 
                         
-<!--                        <input type="checkbox" name="action" value="helpMe">I can't remember my password.-->
-                      
-                    
+               
+                 </form> 
+                 <a href="index.php?action=staffReg">Sign-up</a>
+                  
                  </div>
 
                              
@@ -57,6 +58,6 @@
    
 </body>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.php' ?>
 
 </html>

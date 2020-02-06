@@ -11,13 +11,8 @@ class Util{
     
     function checkUsername($uuname){
        
-        $server="localhost";
-$db="dare";
-$user="root";
-$pwd="";
-
-$conn=mysqli_connect($server, $user, $pwd, $db);
-$sql="SELECT username FROM students WHERE username='$uuname'";
+        require 'db.php';
+$sql="SELECT username FROM student WHERE username='$uuname'";
       $result= mysqli_query($conn, $sql);
       $result_check= mysqli_num_rows($result);
             if($result_check>0){
@@ -31,48 +26,70 @@ $sql="SELECT username FROM students WHERE username='$uuname'";
         
     }
     
-    function insertStudent($fname,$lname,$uname,$pwd,$email,$phone){
+    function insertStudent($fname,$lname,$uname,$pnwd,$email,$phone){
         require 'db.php';
-         $hashpwd= password_hash($pwd, PASSWORD_DEFAULT);
-         $query="INSERT INTO `students`(`first`, `last`, `username`, `password`, `email`, `phone`, `token`) ".
-             "VALUES ('$fname','$lname','$uname','$hashpwd','$email','$phone','')";
+         $hashpwd= password_hash($pnwd, PASSWORD_DEFAULT);
+        $c=true;
+        while($c){
+        $sid= rand(111111, 999999);
+        $sql="SELECT student_id FROM student WHERE student_id='$sid'";
+        $result= mysqli_query($conn, $sql);
+        $rcheck= mysqli_num_rows($result);
+        if ($rcheck>0){
+            $c=true;
+        }
+        else{
+            $c=false;
+        }
+        } 
+         $query="INSERT INTO `student`(`student_id`, `first_name`, `last_name`, `email`, `username`, `password`, "
+                 . "`phone`, `token`) VALUES ('$sid', '$fname','$lname','$email','$uname','$hashpwd','$phone','')";
          
          mysqli_query($conn, $query);     
                 
     }
-    function stuLogin($name,$pwd){
+      function insertStaff($fname,$lname,$uname,$panwd,$email,$phone){
         require 'db.php';
-        $sql="SELECT * FROM students WHERE username='$name';";
+         $hashpawd= password_hash($panwd, PASSWORD_DEFAULT);
+         $query="INSERT INTO `staff`(`first`, `last`, `username`, `password`, `email`, `phone`, `token`) ".
+             "VALUES ('$fname','$lname','$uname','$hashpawd','$email','$phone','')";
+         
+         mysqli_query($conn, $query);     
+                
+    }
+    function staffLogin($name,$pawd){
+        require 'db.php';              
+        $sql="SELECT * FROM staff WHERE username='$name';";  
+        $result = mysqli_query($conn, $sql);
+        while($row= mysqli_fetch_assoc($result)){
+                $tem=$row['password'];
+            } 
      
-      
-        
-          
-        
-            
-
-   
-    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    
-        
-            while($row= mysqli_fetch_assoc($result)){
-                $temp=$row['password'];
-               
-   
-      
-           if($pwdcheck= password_verify($pwd, $temp)){
-             echo $pwd;
-           echo$temp; 
-           include('view/home.php');
-           }
-           
-            
-           
-        }
-        }
-          
+     
+      return ( password_verify($pawd, $tem) );
+                
+                
        
+        }
+
+    function stuLogin($name,$pawd){
+        require 'db.php';              
+        $sql="SELECT * FROM student WHERE username='$name';";  
+        $result = mysqli_query($conn, $sql);
+        while($row= mysqli_fetch_assoc($result)){
+                $temp=$row['password'];
+            } 
+     
+     
+      return ( password_verify($pawd, $temp) );
+                
+                
+       
+        }
+          
         
 
+         
    
     
       

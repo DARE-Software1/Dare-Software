@@ -38,14 +38,14 @@
 
                  <form action="index.php" method="post">
                         <label for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Username" name="uid" required>
+                        <input type="text" placeholder="Enter Username" name="user" required>
                         <br>
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="pwd" required>
                         <br><input type="hidden" name="action" value="sLogIn">
-                        <button type="submit" name='stuLogBut'>Login</button><br> 
+                        <button type="submit" >Login</button><br> 
                         
-<!--                        <input type="checkbox" name="action" value="helpMe">I can't remember my password.-->
+               
                  </form> 
                  <a href="index.php?action=stuReg">Sign-up</a>
                   
