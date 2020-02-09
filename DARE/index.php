@@ -125,6 +125,45 @@ else{
 else if ($action=='staffReg'){
     include'view/staffReg.php';
 }
+else if($action=='staffAssign'){
+    include'view/staffAssign.php';
+}
+else if ($action=='add_ass'){
+    $cid = filter_input(INPUT_POST, 'course_id');
+    $sid = filter_input(INPUT_POST, 'student_id');
+    $ass_name = filter_input(INPUT_POST, 'ass_name');
+    $pe = filter_input(INPUT_POST, 'pe');
+    $pp = filter_input(INPUT_POST, 'pp');
+    $weight = filter_input(INPUT_POST, 'weight');
+    
+    Util::add_ass($cid,$sid,$ass_name,$pe,$pp,$weight);
+    include'view/staffHome.php';
+}
+
+
+
+
+else if ($action=='add_courses'){
+    include 'view/admin.php';
+}
+else if ($action=='add_course'){
+    $cid = filter_input(INPUT_POST, 'course_id');
+    $pid = filter_input(INPUT_POST, 'professor');
+    $cname = filter_input(INPUT_POST, 'course_name');
+    $csd = filter_input(INPUT_POST, 'start_date');
+    $ced = filter_input(INPUT_POST, 'end_date');
+    
+    Util::add_course($cid,$pid,$cname,$csd,$ced);
+    include'view/admin.php';
+}
+else if ($action=='add_stu_to_course'){
+    $cid = filter_input(INPUT_POST, 'coursed_id');
+    $sid = filter_input(INPUT_POST, 'student_id');
+    
+    
+    Util::add_stu_to_course($cid,$sid);
+    include'view/admin.php';
+}
  else {
      include('view/home.php');
 }

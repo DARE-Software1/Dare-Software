@@ -65,18 +65,57 @@ border-style: solid;
 
 <body>
 
+<?php 
+require './includes/db.php'; // get database connection variable 
+$name= $_SESSION['uid'];    // set usernaem to teh session username
+$sql = "SELECT * FROM student WHERE username='$name';";   //the string ogf mysql code to search for information in database
+        $result = mysqli_query($conn, $sql);   // actuallying seaching using the the database connection and mysql code 
+        while ($row = mysqli_fetch_assoc($result)) {   // fetching the student id form the database where the username matched 
+        
+            $temp = $row['student_id'];          // storing sudent id in variable temp
+        }
+        $_SESSION['sid']=$temp;                // setting seesion vairiable sid to temp
+       
+$query="SELECT * FROM course_students WHERE student_id='$temp'";    //another mysql code stirng
 
+$result=mysqli_query($conn,$query); //searching
+
+$data=array();  //create array
+
+while($rows=mysqli_fetch_assoc($result)){//fetching and storing course_name wher studnet id matched in array
+
+$data[]=$rows['course_name'];
+
+
+}
+
+
+
+
+?>
 
 <div class="grid-container">
-  <div class="item1">Class 1<br>
-      time 21:00-15:00
+  <div class="item1"><?php if (!(empty($data[0]))){printf("%s",$data[0]);}    
+  ?>
+  <br>
+    
   </div>
-  <div class="item2">Class 2<br>
-      time 18:00-15:00</div>
-  <div class="item3">Class 3<br>
-      time 21:00-15:00</div>  
-  <div class="item4">Class 4<br>
-      time 21:00-15:00</div>
+  <div class="item2"><?php if (!(empty($data[1]))){printf("%s",$data[1]);}
+ 
+  ?><br>
+      </div>
+  <div class="item3"><?php if (!(empty($data[2]))){printf("%s",$data[2]);}
+  ?><br>
+     </div>  
+  <div class="item4"><?php if (!(empty($data[3]))){printf("%s",$data[3]);}
+  ?><br>
+      </div>
+      <div class="item5"><?php if (!(empty($data[4]))){printf("%s",$data[4]);}
+  ?><br>
+     </div>
+      <div class="item6"><?php if (!(empty($data[5]))){printf("%s",$data[5]);}
+  ?><br>
+      </div>
 
 </div>
 

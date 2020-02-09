@@ -39,7 +39,7 @@
                 
 
                         </h2>
-            
+            <a href='index.php?action=staffAssign'>give grade</a>
 
                 </div>                
 
