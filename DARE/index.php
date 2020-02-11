@@ -12,6 +12,9 @@ if ($action == NULL) {
 
 
 if ($action == 'home') {
+
+  
+   
     include('view/home.php');
 }
 
@@ -21,9 +24,9 @@ else if ($action == 'studentLogin') {
 else if($action=='sLogIn'){
     $uname = filter_input(INPUT_POST, 'user');
     $passw = filter_input(INPUT_POST, 'pwd');
-    session_start();
+  
  if(Util::stuLogin($uname,$passw)){
-     
+    session_start();
      $_SESSION['logint']=true;
      $_SESSION['uid']=$uname;
      include 'view/stuHome.php';
@@ -55,22 +58,50 @@ else if($action=='sumbitStuReg'){
         echo 'passwords did nto match';
         include('view/stuReg.php');
     }
-    
-    
-    
-}
+    }
 else{
     echo 'username taken';
     include ('view/stuReg.php');
 }
 }
+else if ($action == 'stuHome') 
+{    
+    include 'view/stuHome.php';
+}
+
 else if($action == 'stuLogoutBut'){
     session_destroy();
     $_SESSION['logint']=false;
     include "view/home.php";
 }
-
-
+else if ($action=='class1'){
+    $c=$action;
+    
+    $_SESSION['active_class']=$c;
+    
+    include'view/stuGrades.php';
+}
+else if ($action=='class2'){
+    $c=$action;
+    $_SESSION['active_class']=$c;
+    include'view/stuGrades.php';
+}else if ($action=='class3'){
+    $c=$action;
+    $_SESSION['active_class']=$c;
+    include'view/stuGrades.php';
+}else if ($action=='class4'){
+    $c=$action;
+    $_SESSION['active_class']=$c;
+    include'view/stuGrades.php';
+}else if ($action=='class5'){
+    $c=$action;
+    $_SESSION['active_class']=$c;
+    include'view/stuGrades.php';
+}else if ($action=='class6'){
+    $c=$action;
+    $_SESSION['active_class']=$c;
+    include'view/stuGrades.php';
+}
 
 else if ($action == 'staffLogin') {
     
@@ -82,11 +113,24 @@ else if($action=='stLogIn'){
     $passw = filter_input(INPUT_POST, 'pwd');
    
  if(Util::staffLogin($uname,$passw)){
-     session_start();
+    session_start();
+    if(Util::admin_check($uname)){
+     include 'view/admin.php';
+    }
+    else{
+     
+     
+        session_start();
      $_SESSION['loginf']=true;
      $_SESSION['uid']=$uname;
      include 'view/staffHome.php';
- }
+ 
+    }
+}
+ 
+
+
+
  else{
      echo 'failed';
      include 'view/staffLogin.php';
@@ -103,7 +147,7 @@ else if($action=='sumbitStaffReg'){
     $uname = filter_input(INPUT_POST, 'username');
     $pawd = filter_input(INPUT_POST, 'pwd');
     $pwwdr=filter_input(INPUT_POST, 'pwd-repeat');
-    if(Util::checkUsername($uname)){
+    if(Util::checkpUsername($uname)){
        if ($pawd==$pwwdr){
        Util::insertStaff($fname,$lname,$uname,$pwwdr,$em,$phone);
        echo 'successfully created account';

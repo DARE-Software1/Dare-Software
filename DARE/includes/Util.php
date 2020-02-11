@@ -25,6 +25,21 @@ class Util
             return $valid;
         }
     }
+    function checkpUsername($uuname)
+    {
+
+        require 'db.php';
+        $sql = "SELECT username FROM professor WHERE username='$uuname'";
+        $result = mysqli_query($conn, $sql);
+        $result_check = mysqli_num_rows($result);
+        if ($result_check > 0) {
+            $valid = false;
+            return $valid;
+        } else {
+            $valid = true;
+            return $valid;
+        }
+    }
 
     function insertStudent($fname, $lname, $uname, $pnwd, $email, $phone)
     {
@@ -131,4 +146,15 @@ $percent_friendly = number_format( $percent * 100, 2 ) . '%';
         VALUES ('$cid','$sid','$ass_name','$weight','$pe','$pp','$percent_friendly','','')";
         mysqli_query($conn,$sql);
     }
+function admin_check($uname){
+    if ($uname=='karma'){
+        echo true;
+        return true;
+
+    }
+    else{
+        echo false;
+        return false;
+    }
+}
 }
