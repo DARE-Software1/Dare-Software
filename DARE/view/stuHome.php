@@ -107,31 +107,22 @@ $datas[]=$rowss['course_id'];
 ?>
 
 <div class="grid-container">
-  <!-- <div class="item1"><?php if (!(empty($data[0]))){printf("%s",$data[0]);}    
-  ?>
-
-  <br>
-  <a href='index.php?action=class1'>View Grades</a>
-  </div>
-  <div class="item2"><?php if (!(empty($data[1]))){printf("%s",$data[1]);}
 
 
-  ?><br><a href='index.php?action=class2'>View Grades</a>
+    <?php
+      foreach($data as $item)
+      echo "<div>" . $item . "<br>
+      <a href='index.php?action=class1'>View Grades</a>
+    </div>"
+    ?>
 
 
-      </div>
-  <div class="item3"><?php if (!(empty($data[2]))){printf("%s",$data[2]);}
-  ?><br><a href='index.php?action=class3'>View Grades</a>
-     </div>
-  <div class="item4"><?php if (!(empty($data[3]))){printf("%s",$data[3]);}
-  ?><br><a href='index.php?action=class4'>View Grades</a>
-      </div>
-      <div class="item5"><?php if (!(empty($data[4]))){printf("%s",$data[4]);}
-  ?><br><a href='index.php?action=class5'>View Grades</a>
-     </div>
-      <div class="item6"><?php if (!(empty($data[5]))){printf("%s",$data[5]);}
-  ?><br><a href='index.php?action=class6'>View Grades</a> -->
-      </div>
+
+
+
+
+
+</div>
 <?php
 
 $_SESSION['class1']=$datas[0];
