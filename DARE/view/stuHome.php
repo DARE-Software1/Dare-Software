@@ -19,13 +19,13 @@
 
     </head>
     <?php include 'view/stuNav.php'; ?>
-    
-    
 
 
 
 
-    
+
+
+
 <style>
 
 .grid-container {
@@ -40,14 +40,14 @@
 
 .grid-container > div
 {
-   
+
     padding: 100px;
 border: darkblue;
 border-style: solid;
 
 }
 .item1  {
-    background-color: pink ; 
+    background-color: pink ;
 
 }
 .item2{
@@ -65,20 +65,20 @@ border-style: solid;
 
 <body>
 
-<?php 
-require './includes/db.php'; // get database connection variable 
+<?php
+require './includes/db.php'; // get database connection variable
 if(empty($_SESSION['uid'])){
     include 'view/home.php';
 }
 $name= $_SESSION['uid'];    // set usernaem to teh session username
 $sql = "SELECT * FROM student WHERE username='$name';";   //the string ogf mysql code to search for information in database
-        $result = mysqli_query($conn, $sql);   // actuallying seaching using the the database connection and mysql code 
-        while ($row = mysqli_fetch_assoc($result)) {   // fetching the student id form the database where the username matched 
-        
+        $result = mysqli_query($conn, $sql);   // actuallying seaching using the the database connection and mysql code
+        while ($row = mysqli_fetch_assoc($result)) {   // fetching the student id form the database where the username matched
+
             $temp = $row['student_id'];          // storing sudent id in variable temp
         }
         $_SESSION['sid']=$temp;                // setting seesion vairiable sid to temp
-       
+
 $query="SELECT * FROM course_students WHERE student_id='$temp'";    //another mysql code stirng
 
 $result=mysqli_query($conn,$query); //searching
@@ -107,31 +107,21 @@ $datas[]=$rowss['course_id'];
 ?>
 
 <div class="grid-container">
-  <div class="item1"><?php if (!(empty($data[0]))){printf("%s",$data[0]);}    
-  ?>
- 
-  <br>
-  <a href='index.php?action=class1'>View Grades</a>
-  </div>
-  <div class="item2"><?php if (!(empty($data[1]))){printf("%s",$data[1]);}
-  
- 
-  ?><br><a href='index.php?action=class2'>View Grades</a>
-  
 
-      </div>
-  <div class="item3"><?php if (!(empty($data[2]))){printf("%s",$data[2]);}
-  ?><br><a href='index.php?action=class3'>View Grades</a>
-     </div>  
-  <div class="item4"><?php if (!(empty($data[3]))){printf("%s",$data[3]);}
-  ?><br><a href='index.php?action=class4'>View Grades</a>
-      </div>
-      <div class="item5"><?php if (!(empty($data[4]))){printf("%s",$data[4]);}
-  ?><br><a href='index.php?action=class5'>View Grades</a>
-     </div>
-      <div class="item6"><?php if (!(empty($data[5]))){printf("%s",$data[5]);}
-  ?><br><a href='index.php?action=class6'>View Grades</a>
-      </div>
+
+    <?php
+      $i = 1;
+      foreach($data as $item)
+      {
+      echo "<div class=\"item$i\">" . $item . "<br>
+      <a href='index.php?action=class1'>View Grades</a>
+    </div>";
+      $i++;
+      }
+    ?>
+
+
+</div>
 <?php
 
 $_SESSION['class1']=$datas[0];
@@ -154,10 +144,9 @@ $_SESSION['class6']=$datas[5];
 
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
 
 */
-
