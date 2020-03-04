@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <?php
 if(empty($_SESSION['sid'])){
-    include 'view/home.php';
+    //include 'view/home.php';
 }
 $cc= $_SESSION['active_class'];
 $c=$_SESSION[$cc];
@@ -23,20 +23,25 @@ $q=$_SESSION['sid'];
         </title>
 
 
-        <link rel="stylesheet" href="view/style.css">
+        <link rel="stylesheet" href="../view/style.css">
 
 
 
 
     </head>
-    <?php include 'view/stuNav.php'; ?>
-    
-    
+    <body>
+      <?php include 'header.php'; ?>
+
+      <?php include '../view/stuNav.php'; ?>
+
+    </body>
 
 
 
 
-    
+
+
+
 
 
 
@@ -72,7 +77,7 @@ th {
     </tr>
 <?php
 
-  
+
 $query="SELECT * FROM assignments WHERE student_id='$q' && course_id='$c'";    //another mysql code stirng
 
 $result=mysqli_query($conn,$query);
@@ -84,11 +89,11 @@ if ($result->num_rows>0){
     while($row = $result->fetch_assoc()){
         $pe= $pe + floatval($row['pointes_earned']);
         $pp= $pp + floatval($row['points_possible']);
-        echo "<tr><td>".$row['assignment_name']."</td><td>".$row['pointes_earned']."</td><td>". 
+        echo "<tr><td>".$row['assignment_name']."</td><td>".$row['pointes_earned']."</td><td>".
         $row['points_possible']. "</td><td> ". $row['weight']."</td><td>". $row['percentage']."</td></tr>";
     }
     $G=$pe/$pp;
-    
+
     echo"</table>";
 
 }
@@ -99,28 +104,29 @@ if ($result->num_rows>0){
 
 </table>
 </table>
-<tr> 
+<tr>
     <th>Grade</th>
     <th>
         <?php if(!(empty($pp))){
         echo number_format($G*100,$decimals = 2 );
 }
 else echo 0;?>
-    
+
 </th>
 </div>
 </body>
 </div>
 
 <!--footer-->
-<?php include 'view/footer.php'; ?>
+
+<?php include 'footer.php'; ?>
 
 </html>
 
 
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
