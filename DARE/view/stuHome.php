@@ -114,10 +114,11 @@ $datas[]=$rowss['course_id'];
       foreach($data as $item)
       {
       echo "<div class=\"item$i\">" . $item . "<br>
-      <a href='index.php?action=class1'>View Grades</a>
+      <a href='index.php?action=class$i'>View Grades</a>
     </div>";
       $i++;
       }
+      var_dump($datas);
     ?>
 
 
@@ -130,6 +131,8 @@ $_SESSION['class3']=$datas[2];
 $_SESSION['class4']=$datas[3];
 $_SESSION['class5']=$datas[4];
 $_SESSION['class6']=$datas[5];
+
+var_dump($_SESSION['class1']);
 ?>
 </div>
 
