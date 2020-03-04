@@ -66,29 +66,31 @@ nav li {
     margin-right: inherit;
 }
 /*for the individual items of the bar*/
-nav a{
+.navA{
     color: #000000;
     font-size:18px;
-    padding-right: 50px;
     padding-left: 50px;
     text-decoration: none;
     border-radius: 20px;
-    background-color: white;
+    background-color: red;
     padding-top: 8px;
     padding-bottom: 8px;
     width: 25%;
+    float:right;
+    padding-right: 0px;
+    font-size: 19px;
   
 
 }
 nav button{
-    background: white;
+    background: red;
     height: 10%;
     color: black;
     outline: none;
     border: none;
     display: block;
     width: 10%;
-    border-radius: 12px;
+    border-radius: 100px;
     margin-left: 90%;
     
 }
@@ -294,7 +296,7 @@ background: rgba(0,0,0,.3);
 
 footer{
        height: 100px;
-    background-color: #3a4460;
+    background-color: #FFF;
     padding: 0px;
     outline: none;
     color: white;

@@ -1,4 +1,4 @@
-<nav>
+<div class = "navA">
         <ul>
         
           
@@ -22,4 +22,4 @@
         </ul>
    
     
-</nav>
+</div>
