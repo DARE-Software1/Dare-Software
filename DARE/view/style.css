@@ -108,7 +108,39 @@ nav a:hover{
 
 }
 
-
+.grid-container {
+    display: grid;
+    grid-template-columns:  400px 400px ;
+    grid-template-rows: 250px 250px;
+    grid-gap: 150px;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 100px;
+  }
+  
+  .grid-container > div
+  {
+     
+      padding: 100px;
+  border: darkblue;
+  border-style: solid;
+  
+  }
+  .item1  {
+      background-color: pink ; 
+  
+  }
+  .item2{
+      background-color: lightblue;
+  
+  }
+  .item3{
+      background-color: lightgreen;
+  
+  }
+  .item4{
+      background-color: lightcoral;
+  }
 
 
 /* sudent Nav*/
