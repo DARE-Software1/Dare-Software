@@ -110,7 +110,7 @@ $datas[]=$rowss['course_id'];
 
 
     <?php
-      // This code will make courses appear for a student. Once user selects course the id's of student and course will pass to next 
+      // This code will make courses appear for a student. Once user selects course the id's of student and course will pass to next
       $i = 1;
       foreach($data as $item)
       {
@@ -119,7 +119,6 @@ $datas[]=$rowss['course_id'];
     </div>";
       $i++;
       }
-      var_dump($datas);
     ?>
 
 

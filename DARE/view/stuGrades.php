@@ -19,29 +19,11 @@
 
         <link rel="stylesheet" href="../view/style.css">
 
-
-
-
-    </head>
-    <body>
-      <?php include 'header.php'; ?>
-
-      <?php include 'stuNav.php'; ?>
-      <?php echo $stuId . " " . $courseId;?>
-    </body>
-
-
-
-
-
-
-
-
-
-
-
 <body>
+  <?php include 'header.php'; ?>
 
+  <?php include 'stuNav.php'; ?>
+  <?php echo $stuId . " " . $courseId;?>
 <style>
 table {
   border-collapse: collapse;
@@ -73,7 +55,6 @@ th {
 <?php include("../includes/functions.php"); ?>
 
 <?php $stuAssignments = get_Assignments($stuId, $courseId );
-    var_dump($stuAssignments);
      foreach($stuAssignments as $assignments)
     {
       echo get_table_row_elements($assignments);

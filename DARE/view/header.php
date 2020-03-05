@@ -10,7 +10,7 @@
             </div>
             <h1>
 
-                 <a href='../view/index.php?action=home'><img src="../DARE/img/logo.jpg" >   </a>      </h1>
+                 <a href='/Dare/Dare-Software/DARE/index.php?action=home'><img src="/Dare/Dare-Software/DARE/img/logo.jpg" >   </a>      </h1>
 
     </header>
 
