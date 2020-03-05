@@ -110,11 +110,12 @@ $datas[]=$rowss['course_id'];
 
 
     <?php
+      // This code will make courses appear for a student. Once user selects course the id's of student and course will pass to next window
       $i = 1;
       foreach($data as $item)
       {
       echo "<div class=\"item$i\">" . $item . "<br>
-      <a href='../Dare/view/stuGrades.php?action=class$i'>View Grades</a>
+      <a href=../Dare/view/stuGrades.php?id=$temp&courseId=" . $datas[$i-1] ." >View Grades</a>
     </div>";
       $i++;
       }
