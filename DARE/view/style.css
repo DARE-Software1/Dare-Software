@@ -67,7 +67,7 @@ nav li {
 }
 /*for the individual items of the bar*/
 nav a{
-    color: #000000;
+    color:black
     font-size:18px;
     padding-right: 50px;
     padding-left: 50px;
