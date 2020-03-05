@@ -114,7 +114,7 @@ $datas[]=$rowss['course_id'];
       foreach($data as $item)
       {
       echo "<div class=\"item$i\">" . $item . "<br>
-      <a href='/view/stuGrades.php?action=class$i'>View Grades</a>
+      <a href='../Dare/view/stuGrades.php?action=class$i'>View Grades</a>
     </div>";
       $i++;
       }

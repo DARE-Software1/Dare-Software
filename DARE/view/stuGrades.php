@@ -1,16 +1,5 @@
 
 <!DOCTYPE html>
-<?php
-if(empty($_SESSION['sid'])){
-    //include 'view/home.php';
-}
-$cc= $_SESSION['active_class'];
-$c=$_SESSION[$cc];
-$q=$_SESSION['sid'];
-
-
-?>
-
 <html>
 
 <div class="homeBack">
@@ -32,7 +21,7 @@ $q=$_SESSION['sid'];
     <body>
       <?php include 'header.php'; ?>
 
-      <?php include '../view/stuNav.php'; ?>
+      <?php include 'stuNav.php'; ?>
 
     </body>
 
