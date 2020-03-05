@@ -71,8 +71,14 @@ th {
     </tr>
 //code to add rows
 <?php include("../includes/functions.php"); ?>
-<?php $result = get_Assignments($stuId, $courseId );
-    var_dump($result);
+
+<?php $stuAssignments = get_Assignments($stuId, $courseId );
+    var_dump($stuAssignments);
+     foreach($stuAssignments as $assignments)
+    {
+      echo get_table_row_elements($assignments);
+    }
+
 ?>
 </table>
 </table>

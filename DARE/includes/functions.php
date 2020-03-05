@@ -13,11 +13,20 @@ function get_Assignments($stuId, $courseId )
 
    return $row;
 
-
-
-function get_table_row_elements()
-{
-
 }
 
+function get_table_row_elements($element)
+{
+  $output =
+        "<tr>
+            <th>" . $element[0] . "</th>
+            <th>" . $element[1] . "</th>
+            <th>" . $element[2] . "</th>
+            <th>" . $element[3] . "</th>
+            <th>" . $element[4] . "</th>
+        </tr>";
+
+  return $output;
+
+}
 ?>
