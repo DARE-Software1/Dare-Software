@@ -1,3 +1,4 @@
+
 .container{
 
     width:80%;
@@ -45,38 +46,23 @@ header h1{
 
 nav{
     background: #3a4460;
-
-    padding-top: 1px;
     text-align: center;
     color: white;
     width: 100%;
-    
+    overflow: auto; 
 }
-nav ul{
-    margin: 0px 100px 0px 100px;
-    padding: 20px;
-  
-}
-/* make the items float left in a line */
-nav li {
 
-   
-    display: inline;
-    margin-left: inherit;
-    margin-right: inherit;
-}
+/* make the items float left in a line */
+
 /*for the individual items of the bar*/
 nav a{
+    float:left;
     color:black;
-    font-size:18px;
-    padding-right: 50px;
-    padding-left: 50px;
+    font-size:17px;
     text-decoration: none;
-    border-radius: 20px;
     background-color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
     width: 25%;
+    text-align: center;
   
 
 }
@@ -95,19 +81,17 @@ nav button{
 /*change nav bar item when hovered over*/
 nav a:hover{
   color: #000000;
-    font-size:18px;
-    padding-right: 50px;
-    padding-left: 50px;
-    text-decoration: none;
-    border-radius: 20px;
-    background-color: #cee9f4;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    transition: .5s;
-    width:25%;
-
+  background-color: #cee9f4;
 }
 
+@media screen and (max-width: 500px) {
+    nav a{
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}
 .grid-container {
     display: grid;
     grid-template-columns:  400px 400px ;
