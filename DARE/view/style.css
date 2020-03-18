@@ -67,7 +67,7 @@ nav li {
 }
 /*for the individual items of the bar*/
 nav a{
-    color: #000000;
+    color:black;
     font-size:18px;
     padding-right: 50px;
     padding-left: 50px;
@@ -108,8 +108,55 @@ nav a:hover{
 
 }
 
-
-
+.grid-container {
+    display: grid;
+    grid-template-columns:  400px 400px ;
+    grid-template-rows: 250px 250px;
+    grid-gap: 150px;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 100px;
+  }
+  
+  .grid-container > div
+  {
+  
+      padding: 100px;
+  border: darkblue;
+  border-style: solid;
+  
+  }
+  .item1  {
+      background-color: pink ;
+  
+  }
+  .item2{
+      background-color: lightblue;
+  
+  }
+  .item3{
+      background-color: lightgreen;
+  
+  }
+  .item4{
+      background-color: lightcoral;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 /* sudent Nav*/
 

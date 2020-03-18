@@ -22,6 +22,7 @@
 <body>
   <?php include 'header.php'; ?>
 
+
   <?php include 'stuNav.php'; ?>
   <?php echo $stuId . " " . $courseId;?>
 <style>
@@ -35,13 +36,7 @@ th, td {
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
 
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
 <div class="gradeTable">
 <table >
     <tr>

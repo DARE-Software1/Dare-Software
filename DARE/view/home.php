@@ -32,7 +32,7 @@
 
                 <h2>
 
-         The Easy Way to Manage Grades
+         The easy Way to Manage Grades
    
                     <br>
 <br>
