@@ -68,11 +68,12 @@ $datas[]=$rowss['course_id'];
 
 
     <?php
+      // This code will make courses appear for a student. Once user selects course the id's of student and course will pass to next
       $i = 1;
       foreach($data as $item)
       {
       echo "<div class=\"item$i\">" . $item . "<br>
-      <a href='index.php?action=class1'>View Grades</a>
+      <a href=../Dare/view/stuGrades.php?id=$temp&courseId=" . $datas[$i-1] ." >View Grades</a>
     </div>";
       $i++;
       }
@@ -88,6 +89,8 @@ $_SESSION['class3']=$datas[2];
 $_SESSION['class4']=$datas[3];
 $_SESSION['class5']=$datas[4];
 $_SESSION['class6']=$datas[5];
+
+var_dump($_SESSION['class1']);
 ?>
 </div>
 
