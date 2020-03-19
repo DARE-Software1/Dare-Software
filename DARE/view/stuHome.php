@@ -83,14 +83,8 @@ $datas[]=$rowss['course_id'];
 </div>
 <?php
 
-$_SESSION['class1']=$datas[0];
-$_SESSION['class2']=$datas[1];
-$_SESSION['class3']=$datas[2];
-$_SESSION['class4']=$datas[3];
-$_SESSION['class5']=$datas[4];
-$_SESSION['class6']=$datas[5];
 
-var_dump($_SESSION['class1']);
+
 ?>
 </div>
 

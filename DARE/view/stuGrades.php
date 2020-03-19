@@ -24,7 +24,7 @@
 
 
   <?php include 'stuNav.php'; ?>
-  <?php echo $stuId . " " . $courseId;?>
+  
 <style>
 table {
   border-collapse: collapse;
@@ -35,7 +35,7 @@ th, td {
   text-align: left;
   padding: 8px;
 }
-
+</style>
 
 <div class="gradeTable">
 <table >
@@ -46,7 +46,7 @@ th, td {
         <th>Weight</th>
         <th> Percentage</th>
     </tr>
-//code to add rows
+
 <?php include("../includes/functions.php"); ?>
 
 <?php $stuAssignments = get_Assignments($stuId, $courseId );
