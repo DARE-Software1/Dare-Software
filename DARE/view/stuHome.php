@@ -12,19 +12,22 @@
         </title>
 
 
-        <link rel="stylesheet" href="view/style.css">
+        <link rel="stylesheet" href="style.css">
 
 
 
 
     </head>
-    <?php include 'view/stuNav.php'; ?>
+    <?php include 'stuNav.php'; ?>
 
 
 <body>
 
 <?php
-require './includes/db.php'; // get database connection variable
+session_start();
+require '../includes/db.php';; // get database connection variable
+
+
 if(empty($_SESSION['uid'])){
     include 'view/home.php';
 }
@@ -92,7 +95,7 @@ $datas[]=$rowss['course_id'];
 </div>
 
 <!--footer-->
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
 </html>
 

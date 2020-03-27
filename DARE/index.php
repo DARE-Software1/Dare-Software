@@ -29,7 +29,14 @@ else if($action=='sLogIn'){
     session_start();
      $_SESSION['logint']=true;
      $_SESSION['uid']=$uname;
-     include 'view/stuHome.php';
+     header('Location: view/stuHome.php');
+     exit;
+     echo "Hello";
+    // include 'view/stuHome.php';
+    // echo $_SERVER['HTTP_HOST'];
+
+     //header('Location: http://' . $_SERVER['HTTP_HOST'] . 'view/stuHome.php')
+     //http://localhost:50080/Dare/Dare-Software/DARE/index.php
  }
  else{
      echo 'failed';
@@ -70,7 +77,7 @@ else if ($action == 'stuHome')
 }
 
 else if($action == 'stuLogoutBut'){
-    
+
       @session_destroy();
 
 
