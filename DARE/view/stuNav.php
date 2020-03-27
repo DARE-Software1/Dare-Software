@@ -3,12 +3,9 @@
 
 
             <li>
-                <a href='/Dare/Dare-Software/DARE/index.php?action=stuHome'> Home</a>
+                <a href='/Dare/Dare-Software/DARE/view/stuHome.php'> Home</a>
             </li>
 
-            <li>
-                <a href='/Dare/Dare-Software/DARE/index.php?action=stuCourses'> Courses</a>
-            </li>
             <li>
                    <a href='/Dare/Dare-Software/DARE/index.php?action=stuGrades'> Grades</a>
 

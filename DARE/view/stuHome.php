@@ -76,7 +76,7 @@ $datas[]=$rowss['course_id'];
       foreach($data as $item)
       {
       echo "<div class=\"item$i\">" . $item . "<br>
-      <a href=../Dare/view/stuGrades.php?id=$temp&courseId=" . $datas[$i-1] ." >View Grades</a>
+      <a href=stuGrades.php?id=$temp&courseId=" . $datas[$i-1] ." >View Grades</a>
     </div>";
       $i++;
       }
