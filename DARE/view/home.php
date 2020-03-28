@@ -13,49 +13,44 @@
 </head>
 
  <?php include 'view/header.php'; ?>
-  
-  
-  
-   
+
+
+
+
     <?php include 'view/nav.php'; ?>
     <body>
 
         <div class="overlay">
             <div class="container">
 
-              
-              
-              
-                
-                
+
+
+
+
+
 <div class="home">
 
                 <h2>
 
-<<<<<<< Updated upstream
          The easy Way to Manage Grades
-=======
-         The Easy Way to Manage Grades
->>>>>>> Stashed changes
-   
+
+
                     <br>
 <br>
                 <img src="img/work.jpg">
-                
+
 
                         </h2>
-            
 
-                </div>                
+
+                </div>
 
             </div>
         </div>
-   
+
 </body>
     </div>
   <!--footer-->
     <?php include 'view/footer.php'; ?>
 
 </html>
-
-
