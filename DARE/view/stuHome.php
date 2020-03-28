@@ -21,6 +21,7 @@
     <?php include 'stuNav.php'; ?>
 
 
+
 <body>
 
 <?php
@@ -39,6 +40,8 @@ $sql = "SELECT * FROM student WHERE username='$name';";   //the string ogf mysql
             $temp = $row['student_id'];          // storing sudent id in variable temp
         }
         $_SESSION['sid']=$temp;                // setting seesion vairiable sid to temp
+
+
 
 $query="SELECT * FROM course_students WHERE student_id='$temp'";    //another mysql code stirng
 
@@ -84,8 +87,8 @@ $datas[]=$rowss['course_id'];
 
 
 </div>
-<?php
 
+<?php
 
 
 ?>
@@ -103,8 +106,10 @@ $datas[]=$rowss['course_id'];
 <?php
 
 /*
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
 
 */
+

@@ -25,6 +25,7 @@
 
   <?php include 'stuNav.php'; ?>
   
+
 <style>
 table {
   border-collapse: collapse;
@@ -37,6 +38,7 @@ th, td {
 }
 </style>
 
+
 <div class="gradeTable">
 <table >
     <tr>
@@ -46,6 +48,8 @@ th, td {
         <th>Weight</th>
         <th> Percentage</th>
     </tr>
+
+
 
 <?php include("../includes/functions.php"); ?>
 
@@ -59,6 +63,7 @@ th, td {
 </table>
 </table>
 <tr>
+
     <th>Grade</th>
     <th>
         <?php if(!(empty($pp))){
@@ -66,6 +71,8 @@ th, td {
 }
 else echo 0;?>
 
+
+    
 </th>
 </div>
 </body>
@@ -75,14 +82,17 @@ else echo 0;?>
 
 <?php include 'footer.php'; ?>
 
+
 </html>
 
 
 <?php
 
 /*
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
 
 */
+

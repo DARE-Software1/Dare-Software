@@ -32,7 +32,11 @@
 
                 <h2>
 
+<<<<<<< Updated upstream
          The easy Way to Manage Grades
+=======
+         The Easy Way to Manage Grades
+>>>>>>> Stashed changes
    
                     <br>
 <br>
