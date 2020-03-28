@@ -15,16 +15,18 @@ function get_Assignments($stuId, $courseId )
 
 }
 
+//This function will return a row in a table with any number of columns 
 function get_table_row_elements($element)
 {
-  $output =
-        "<tr>
-            <th>" . $element[0] . "</th>
-            <th>" . $element[1] . "</th>
-            <th>" . $element[2] . "</th>
-            <th>" . $element[3] . "</th>
-            <th>" . $element[4] . "</th>
-        </tr>";
+  $length = count($element);
+  $output = "<tr>";
+  $tableRow = "";
+  for($i = 0; $i < $length; $i++)
+  {
+    $tableRow = $tableRow . "<th>" . $element[$i] . "</th>";
+  }
+
+  $output = $output . $tableRow . "</tr>";
 
   return $output;
 

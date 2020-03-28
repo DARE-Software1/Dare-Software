@@ -2,10 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-<?php
-  $stuId = $_GET["id"];
-  $courseId = $_GET["courseId"];
-?>
+
 
 <div class="homeBack">
     <head>
@@ -52,11 +49,10 @@ th, td {
 <?php $stuAssignments = get_Assignments($stuId, $courseId );
      foreach($stuAssignments as $assignments)
     {
-      echo get_table_row_elements($assignments);
+      echo get_table_row_elements_class($assignments);
     }
 
 ?>
-</table>
 </table>
 <tr>
     <th>Grade</th>

@@ -24,7 +24,7 @@
 
 
   <?php include 'stuNav.php'; ?>
-  
+
 
 <style>
 table {
@@ -72,7 +72,7 @@ th, td {
 else echo 0;?>
 
 
-    
+
 </th>
 </div>
 </body>
@@ -95,4 +95,3 @@ else echo 0;?>
  * and open the template in the editor.
 
 */
-
