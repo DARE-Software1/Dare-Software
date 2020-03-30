@@ -54,26 +54,26 @@ th, td {
 <?php include("../includes/functions.php"); ?>
 
 <?php $stuAssignments = get_Assignments($stuId, $courseId );
+      $pointsEarned = 0;
+      $pointsPossible = 0;
      foreach($stuAssignments as $assignments)
     {
       echo get_table_row_elements($assignments);
+      $pointsEarned += $assignments[1];
+      $pointsPossible += $assignments[2];
     }
 
 ?>
 </table>
-</table>
+
 <tr>
 
     <th>Grade</th>
     <th>
-        <?php if(!(empty($pp))){
-        echo number_format($G*100,$decimals = 2 );
-}
-else echo 0;?>
-
-
-
-</th>
+        <?php
+          calculate_grade($pointsEarned, $pointsPossible);
+        ?>
+    </th>
 </div>
 </body>
 </div>

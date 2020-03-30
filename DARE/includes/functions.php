@@ -15,7 +15,7 @@ function get_Assignments($stuId, $courseId )
 
 }
 
-//This function will return a row in a table with any number of columns 
+//This function will return a row in a table with any number of columns
 function get_table_row_elements($element)
 {
   $length = count($element);
@@ -31,4 +31,6 @@ function get_table_row_elements($element)
   return $output;
 
 }
+
+function calculate_grade()
 ?>
