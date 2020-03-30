@@ -71,7 +71,7 @@ th, td {
     <th>Grade</th>
     <th>
         <?php
-          calculate_grade($pointsEarned, $pointsPossible);
+          echo calculate_grade($pointsEarned, $pointsPossible);
         ?>
     </th>
 </div>
