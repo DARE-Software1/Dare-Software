@@ -40,7 +40,7 @@ th, td {
 
 
 <div class="gradeTable">
-<table >
+<table>
     <tr>
         <th>Assignment</th>
         <th>Points Earned</th>
@@ -66,6 +66,9 @@ th, td {
 ?>
 </table>
 
+</div>
+
+<table>
 <tr>
 
     <th>Grade</th>
@@ -74,7 +77,18 @@ th, td {
           echo calculate_grade($pointsEarned, $pointsPossible);
         ?>
     </th>
-</div>
+    <th>
+        <?php
+          echo $pointsEarned . "/" . $pointsPossible;
+        ?>
+    </th>
+    <th>
+        <?php
+          echo round(($pointsEarned/$pointsPossible) * 100, 2) . "%";
+        ?>
+    </th>
+
+  </table>
 </body>
 </div>
 
