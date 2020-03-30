@@ -40,7 +40,7 @@ th, td {
 
 
 <div class="gradeTable">
-<table >
+<table>
     <tr>
         <th>Assignment</th>
         <th>Points Earned</th>
@@ -54,27 +54,41 @@ th, td {
 <?php include("../includes/functions.php"); ?>
 
 <?php $stuAssignments = get_Assignments($stuId, $courseId );
+      $pointsEarned = 0;
+      $pointsPossible = 0;
      foreach($stuAssignments as $assignments)
     {
       echo get_table_row_elements($assignments);
+      $pointsEarned += $assignments[1];
+      $pointsPossible += $assignments[2];
     }
 
 ?>
 </table>
-</table>
+
+</div>
+
+<table>
 <tr>
 
     <th>Grade</th>
     <th>
-        <?php if(!(empty($pp))){
-        echo number_format($G*100,$decimals = 2 );
-}
-else echo 0;?>
+        <?php
+          echo calculate_grade($pointsEarned, $pointsPossible);
+        ?>
+    </th>
+    <th>
+        <?php
+          echo $pointsEarned . "/" . $pointsPossible;
+        ?>
+    </th>
+    <th>
+        <?php
+          echo round(($pointsEarned/$pointsPossible) * 100, 2) . "%";
+        ?>
+    </th>
 
-
-
-</th>
-</div>
+  </table>
 </body>
 </div>
 
