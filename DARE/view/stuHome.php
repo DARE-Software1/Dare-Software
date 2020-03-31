@@ -112,4 +112,3 @@ $datas[]=$rowss['course_id'];
  * and open the template in the editor.
 
 */
-
