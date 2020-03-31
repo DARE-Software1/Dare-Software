@@ -110,7 +110,7 @@ nav a:hover{
 .grid-container {
     display: grid;
     grid-template-columns:  400px ;
-    grid-template-rows: 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;
     grid-gap: 80px;
     justify-items: center;
     justify-content: space-evenly;
@@ -314,7 +314,8 @@ footer {
     outline: none;
     color: white;
     width: 100%;
-    position: absolute;
+    position: relative;
+    margin-top: 75px;
 }
 
 
