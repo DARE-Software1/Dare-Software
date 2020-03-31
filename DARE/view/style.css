@@ -8,7 +8,8 @@
 }
 
 .homeBack{
-    background: url("../img/white.jpg");
+    background-image: url("../img/white.jpg");
+    
 }
 
 /*head*/
@@ -334,7 +335,7 @@ footer {
       display: inline;
       margin-left: inherit;
       margin-right: inherit;
-      width: auto;
+      
   }
   /*for the individual items of the bar*/
   nav a{

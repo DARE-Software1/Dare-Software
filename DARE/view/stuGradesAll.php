@@ -1,4 +1,4 @@
-//Create the stuGradesAll page -Dan 
+
 <html>
     <div class="homeBack">
     
