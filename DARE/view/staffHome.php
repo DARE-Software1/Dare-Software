@@ -143,8 +143,6 @@ var_dump($_SESSION['class1']);
 
 <?php
 
-<<<<<<< Updated upstream
-=======
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -152,4 +150,3 @@ var_dump($_SESSION['class1']);
  */
 
 
->>>>>>> Stashed changes
