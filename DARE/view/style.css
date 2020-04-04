@@ -301,7 +301,8 @@ background: rgba(0,0,0,.3);
 
 #class td, #class th { 
     border: 1px solid #ddd;
-    padding: 8px; 
+    padding: 30px; 
+    height: 85px;
 }
 
 #class tr:nth-child(even){background-color: #f2f2f2;}
@@ -309,8 +310,8 @@ background: rgba(0,0,0,.3);
 #class tr:hover {background-color: #ddd;}
 
 #class th { 
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:8px;
+    padding-bottom:8px;
     text-align: left;
     background: #3a4460;
     color: white; 
