@@ -292,22 +292,30 @@ background: rgba(0,0,0,.3);
     background: none;
     border-color: #3a4460;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
 
 #class { 
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
     border-collapse: collapse; 
     width: 100%; 
+    
+    
 }
 
 #class td, #class th { 
     border: 1px solid #ddd;
-    padding: 30px; 
+    padding: 8px; 
     height: 85px;
+    
 }
-
-#class tr:nth-child(even){background-color: #f2f2f2;}
-
-
 
 #class th { 
     padding-top:8px;
@@ -315,6 +323,7 @@ background: rgba(0,0,0,.3);
     text-align: left;
     background: #3a4460;
     color: white; 
+    
 }
 /*student pages*/
 

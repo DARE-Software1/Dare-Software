@@ -23,7 +23,7 @@
     $tableRow = "";
     for($i = 0; $i < $length; $i++)
     {
-      $tableRow = $tableRow . "<th>" . $element[$i] . "</th>";
+      $tableRow = $tableRow . "<td>" . $element[$i] . "</td>";
     }
 
     $output = $output . $tableRow . "</tr>";

@@ -7,8 +7,9 @@
   $courseId = $_GET["courseId"];
 ?>
 
-<div class="homeBack">
+
     <head>
+      <div class="homeBack">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>
@@ -26,21 +27,11 @@
   <?php include 'stuNav.php'; ?>
 
 
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-</style>
 
 
-<div class="gradeTable">
-<table>
+
+<table id = "class">
+
     <tr>
         <th>Assignment</th>
         <th>Points Earned</th>
@@ -64,37 +55,42 @@ th, td {
     }
 
 ?>
-</table>
 
-</div>
 
-<table>
-<tr>
 
-    <th>Grade</th>
-    <th>
+  </table>
+  <tr>
+    <table id = "class">
+    <th>Cummulative Grade </th>
+    <th> Total Points </th>
+    <th> Percentage </th>
+    </tr>
+    <tr>
+    <td>
         <?php
           echo calculate_grade($pointsEarned, $pointsPossible);
         ?>
-    </th>
-    <th>
+    </td>
+    <td>
         <?php
           echo $pointsEarned . "/" . $pointsPossible;
         ?>
-    </th>
-    <th>
+    </td>
+    <td>
         <?php
           echo round(($pointsEarned/$pointsPossible) * 100, 2) . "%";
         ?>
-    </th>
-
+    </td>
+    </tr>
   </table>
+  
+  <?php include 'footer.php'; ?>
 </body>
 </div>
 
 <!--footer-->
 
-<?php include 'footer.php'; ?>
+
 
 
 </html>
