@@ -1,7 +1,7 @@
 
 <footer>
 
-        <div class="bottom">
+        
             <div class="container">
                 <p>Contact us
                     <br>
@@ -13,7 +13,7 @@
                           <a href='index.php?action=add_courses'>Maintainence </a>
            </span>
                 </p>
-            </div>
+            
         </div>
 
     </footer>

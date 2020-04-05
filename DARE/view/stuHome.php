@@ -95,12 +95,13 @@ $datas[]=$rowss['course_id'];
 </div>
 
 </body>
-</div>
 
 <!--footer-->
 <?php include 'footer.php'; ?>
 
+</div>
 </html>
+
 
 
 <?php
