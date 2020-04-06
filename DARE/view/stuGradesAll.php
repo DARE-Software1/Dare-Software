@@ -25,7 +25,7 @@
             $results = mysqli_query($conn, $sql);
             $rows = $results -> fetch_all();
 
-    //Variable will be used for end table
+    //Get names of courses and ids into arrays
     $courseNames = [];
     $courseIds = [];
     $length = count($rows);
@@ -35,6 +35,7 @@
       array_push($courseIds, $rows[$i][1]);
     }
 
+    //Get percentages in each course and put into array
     $percentages = [];
     foreach($courseIds as $id)
     {
@@ -50,9 +51,16 @@
           array_push($percentages, $percent);
 
     }
+    //Get grades for each course and put into array 
+    $grades = [];
+    foreach($percentages as $percent)
+    {
+      $grade = calculate_grade($percent);
+      array_push($grades, $grade);
+    }
 
 
-    //Now find the letter grade and put to an array
+
 
 
 
@@ -64,33 +72,16 @@
             <th> Percentage </th>
             <th> Final Grade </th>
         </tr>
-        <tr>
-            <td> Software Engineering and Practice </td>
-            <td> 95% </td>
-            <td> A </td>
 
-        </tr>
+        <?php
+          for($i = 0; $i < $length; $i++)
+          {
+            $tableRow = "<tr> <td>" . $courseNames[$i] . "</td> <td>" . $percentages[$i] . "</td> <td>" . $grades[$i] . "</td> </tr>";
+            echo $tableRow;
+          }
 
-        <tr>
-            <td> Design and Analysis of Algorithms </td>
-            <td> 67% </td>
-            <td> D+ </td>
+        ?>
 
-        </tr>
-
-        <tr>
-            <td> Intro to Electrical and Computer Engineering </td>
-            <td> 78% </td>
-            <td> C </td>
-
-        </tr>
-
-        <tr>
-            <td> Database Design and Implementation  </td>
-            <td> 83% </td>
-            <td> B </td>
-
-        </tr>
 
 
     </table>
