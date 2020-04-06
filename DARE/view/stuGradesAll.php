@@ -19,22 +19,42 @@
     require '../includes/db.php';
     include("../includes/functions.php");
 
-    $id = $_SESSION['sid'];
+    $stuId = $_SESSION['sid'];
     //Get courses
-    $sql = "SELECT course_name, course_id FROM course_students WHERE student_id=$id";
+    $sql = "SELECT course_name, course_id FROM course_students WHERE student_id=$stuId";
             $results = mysqli_query($conn, $sql);
             $rows = $results -> fetch_all();
 
-
-    $courses = [];
+    //Variable will be used for end table
+    $courseNames = [];
+    $courseIds = [];
     $length = count($rows);
     for($i = 0; $i < $length; $i++)
     {
-      array_push($courses, $rows[$i][0]);
+      array_push($courseNames, $rows[$i][0]);
+      array_push($courseIds, $rows[$i][1]);
     }
 
-    echo $courses[0];
-    echo $courses[1];
+    $percentages = [];
+    foreach($courseIds as $id)
+    {
+      $stuAssignments = get_Assignments($stuId, $id );
+            $pointsEarned = 0;
+            $pointsPossible = 0;
+           foreach($stuAssignments as $assignments)
+          {
+            $pointsEarned += $assignments[1];
+            $pointsPossible += $assignments[2];
+          }
+          $percent = round(($pointsEarned/$pointsPossible) * 100, 2) . "%";
+          array_push($percentages, $percent);
+
+    }
+
+
+    //Now find the letter grade and put to an array
+
+
 
   ?>
     <table id="class">
