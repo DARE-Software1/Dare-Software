@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-    
-    
+
+
     <head>
         <div class="homeBack">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        
+
         <link rel="stylesheet" href="style.css">
-        
-</head> 
-   
+
+</head>
+
     <?php include 'stuNav.php' ?>
-    
+
 <body>
-    
+
     <table id="class">
-        
-        <tr> 
+
+        <tr>
             <th> Class </th>
-            <th> Percentage </th> 
+            <th> Percentage </th>
             <th> Final Grade </th>
-        </tr> 
-        <tr> 
+        </tr>
+        <tr>
             <td> Software Engineering and Practice </td>
             <td> 95% </td>
-            <td> A </td> 
+            <td> A </td>
 
         </tr>
 
-        <tr> 
+        <tr>
             <td> Design and Analysis of Algorithms </td>
             <td> 67% </td>
-            <td> D+ </td> 
+            <td> D+ </td>
 
         </tr>
-         
-        <tr> 
+
+        <tr>
             <td> Intro to Electrical and Computer Engineering </td>
             <td> 78% </td>
-            <td> C </td> 
+            <td> C </td>
 
         </tr>
 
-        <tr> 
+        <tr>
             <td> Database Design and Implementation  </td>
             <td> 83% </td>
-            <td> B </td> 
+            <td> B </td>
 
         </tr>
 
-        
-    </table> 
+
+    </table>
 <?php include 'footer.php' ?>
 
 
-</body> 
+</body>
 
 
 </div>

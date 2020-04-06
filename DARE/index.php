@@ -77,7 +77,7 @@ else if ($action == 'stuHome')
 }
 
 else if($action == 'stuLogoutBut'){
-
+session_start();
       @session_destroy();
 
 
