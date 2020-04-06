@@ -14,7 +14,29 @@
     <?php include 'stuNav.php' ?>
 
 <body>
+  <?php
+    session_start();
+    require '../includes/db.php';
+    include("../includes/functions.php");
 
+    $id = $_SESSION['sid'];
+    //Get courses
+    $sql = "SELECT course_name, course_id FROM course_students WHERE student_id=$id";
+            $results = mysqli_query($conn, $sql);
+            $rows = $results -> fetch_all();
+
+
+    $courses = [];
+    $length = count($rows);
+    for($i = 0; $i < $length; $i++)
+    {
+      array_push($courses, $rows[$i][0]);
+    }
+
+    echo $courses[0];
+    echo $courses[1];
+
+  ?>
     <table id="class">
 
         <tr>
