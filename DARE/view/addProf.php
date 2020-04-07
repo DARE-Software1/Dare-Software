@@ -17,7 +17,7 @@
   
   
     <!-- navigation bar-->
-    <?php include 'nav.php' ?>
+    <?php include 'adminNav.php' ?>
     
     
       <div class="overlay">
@@ -25,7 +25,7 @@
      
          <div class="stuRegi">
    <div class="stuReg">
-   <h2>Student Sign-up</h2>
+   <h2>Staff Sign-up</h2>
    
     <form action='index.php' method="POST">
            First name:<br>
@@ -36,11 +36,11 @@
   <br>
             <br>
                    Phone number:<br>
-  <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"  ><span> <br>Format: 123-456-78903</span>
+  <input type="text" name="phone" >
   <br><br>
 
                     Email:<br>
-  <input type="email" name="email" placeholder="fak@email.com"  required="">
+  <input type="text" name="email" placeholder="fak@email.com"  required="">
   <br><br>
                   Username:<br>
                   <input type="text" name="username" placeholder="e.g. Jsmith3" required="" >
@@ -51,10 +51,10 @@
                   <input type="password" name="pwd-repeat" placeholder="repeat password"  required="" >
   <br><br>
          
-  <br><input type="hidden" name="action" value="sumbitStuReg">
+  <br><input type="hidden" name="action" value="sumbitStaffReg">
                         <button type="submit" name='stuReg-submit'>SUBMIT</button><br> 
    </form>
-       </div
+</div>
         </div>
              </div>
    
@@ -75,3 +75,11 @@
 <?php include 'view/footer.php' ?>
 
 </html>
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+

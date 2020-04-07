@@ -8,10 +8,15 @@
 
             <li>
                 <a href='/Dare/Dare-Software/DARE/view/stuGradesAll.php'> Grades</a>
+            </li> 
+             <li >
+                <a href='/Dare/Dare-Software/DARE/index.php?action=calc'> Claculator</a>
             </li>
+      
              <li >
                 <a href='/Dare/Dare-Software/DARE/index.php?action=stuLogoutBut'> Logout</a>
             </li>
+          
         </ul>
 
 

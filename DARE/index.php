@@ -59,21 +59,24 @@ else if($action=='sumbitStuReg'){
        if ($paawd==$pwdr){
        Util::insertStudent($fname,$lname,$uname,$pwdr,$em,$phone);
        echo 'successfully created account';
-      include('view/studentLogin.php');
+      include('view/admin.php');
     }
     else if($pwd!=$pwdr){
         echo 'passwords did nto match';
-        include('view/stuReg.php');
+        include('view/addStu.php');
     }
     }
 else{
     echo 'username taken';
-    include ('view/stuReg.php');
+    include ('view/addStu.php');
 }
 }
 else if ($action == 'stuHome')
 {
     include 'view/stuHome.php';
+}
+else if($action == 'calc'){
+    include "view/calc.php";
 }
 
 else if($action == 'stuLogoutBut'){
@@ -125,12 +128,14 @@ else if($action=='stLogIn'){
  if(Util::staffLogin($uname,$passw)){
     session_start();
     if(Util::admin_check($uname)){
+        $_SESSION['loginf']=true;
+        $_SESSION['uid']=$uname;
      include 'view/admin.php';
     }
     else{
 
 
-        session_start();
+  
      $_SESSION['loginf']=true;
      $_SESSION['uid']=$uname;
      include 'view/staffHome.php';
@@ -147,8 +152,22 @@ else if($action=='stLogIn'){
  }
 }
 
+else if ($action == 'addStu') {
 
+    include('view/addStu.php');
+}
+else if ($action == 'addProf') {
 
+    include('view/addProf.php');
+}
+else if ($action == 'addCourse') {
+
+    include('view/addCourse.php');
+}
+else if ($action == 'addStuToCourse') {
+
+    include('view/addStuToCourse.php');
+}
 else if($action=='sumbitStaffReg'){
     $fname = filter_input(INPUT_POST, 'firstname');
     $lname = filter_input(INPUT_POST, 'lastname');
@@ -161,24 +180,21 @@ else if($action=='sumbitStaffReg'){
        if ($pawd==$pwwdr){
        Util::insertStaff($fname,$lname,$uname,$pwwdr,$em,$phone);
        echo 'successfully created account';
-      include('view/staffLogin.php');
+      include('view/admin.php');
     }
     else if($pwd!=$pwdr){
         echo 'passwords did nto match';
-        include('view/staffReg.php');
+        include('view/addProf.php');
     }
-
 
 
 }
 else{
     echo 'username taken';
-    include ('view/staffReg.php');
+    include ('view/addProf.php');
 }
 }
-else if ($action=='staffReg'){
-    include'view/staffReg.php';
-}
+
 else if($action=='staffAssign'){
     include'view/staffAssign.php';
 }

@@ -16,7 +16,8 @@
     <?php include 'view/nav.php'; ?>
 <body>
     <?php
-    require '.includes/db.php'; //get database connection variable
+  @session_start();
+    require './includes/db.php'; //get database connection variable
     if(empty($_SESSION['uid'])){
         include 'view/home.php';
     }
@@ -26,7 +27,8 @@ $sql = "SELECT * FROM professor WHERE username='$name';";   //the string of mysq
         while ($row = mysqli_fetch_assoc($result)) {   // fetching the professor id form the database where the username matched
             $temp = $row['professor_id'];          // storing professor id in variable temp
         }
-        $_SESSION['sid']=$temp;                // setting seesion variable sid to temp
+        $_SESSION['sid']=$temp;   
+                    // setting seesion variable sid to temp
 
 $query="SELECT * FROM course WHERE professor_id='$temp'";    //another mysql code string
 

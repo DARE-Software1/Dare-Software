@@ -47,7 +47,7 @@
                         
                
                  </form> 
-                 <a href="index.php?action=staffReg">Sign-up</a>
+            
                   
                  </div>
 

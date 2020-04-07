@@ -148,12 +148,12 @@ $percent_friendly = number_format( $percent * 100, 2 ) . '%';
     }
 function admin_check($uname){
     if ($uname=='karma'){
-        echo true;
+      
         return true;
 
     }
     else{
-        echo false;
+        
         return false;
     }
 }
