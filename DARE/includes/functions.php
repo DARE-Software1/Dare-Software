@@ -32,9 +32,9 @@
 
   }
   //This function will calulate the grade for a particular class and return a letter grade
-  function calculate_grade($pointsEarned, $pointsPossible)
+  function calculate_grade($gradePercent)
   {
-      $gradePercent = ($pointsEarned/$pointsPossible) * 100;
+      
 
       $letterGrade = "";
       if($gradePercent >= 90)

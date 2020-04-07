@@ -1,6 +1,5 @@
+ 
  .container{
-
-
     width:80%;
     margin:auto;
     overflow:hidden;
@@ -40,12 +39,73 @@ header h1{
 }
 
 
+/* admin forms*/
 
-
-
-
-
-
+.admin ul li .field-style:focus {
+    box-shadow: 0 0 5px #b0cfe0;
+    border: 2px solid #b0cfe0;
+}
+.admin  {
+    max-width: 75%;
+    margin-left: 12.5% auto;
+    margin-right: 12.5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    border: 4px dashed #000000;
+}
+.admin ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.admin ul li{ 
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+.admin ul li .field-style{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #b0cfe0;
+   /* -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out; */
+}
+.admin ul li .field-split{
+    width: 48%;
+}
+.admin ul li .field-full{
+    width: 100%;
+}
+.admin ul li input.align-left{
+    float: left;
+}
+.admin ul li input.align-right{
+    float: right;
+}
+.admin ul li input[type="button"], 
+.admin ul li input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #216288;
+	border: 1px solid #17445E;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+.admin ul li input[type="button"]:hover, 
+.admin ul li input[type="submit"]:hover {
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background-color: #28739E;
+}
 
 /*nav */
 
@@ -90,9 +150,6 @@ nav a{
     text-align: center;
     margin-right: 25px;
 
-
-
-
 }
 
 /*change nav bar item when hovered over*/
@@ -125,11 +182,9 @@ nav a:hover{
 
   .grid-container > div
   {
-
       padding: 100px;
   border: darkblue;
   border-style: solid;
-
   }
   .item1  {
       background-color: pink ;
@@ -393,5 +448,5 @@ footer {
         justify-items: center;
         justify-content: space-evenly;
         margin-top: 100px;
-      }
-}
+    } 
+}  

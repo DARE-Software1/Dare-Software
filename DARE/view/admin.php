@@ -8,7 +8,7 @@
 
     </title>
 
-     <link rel="stylesheet" href="view/style.css">
+     <link rel="stylesheet" type="text/css" href="view/style.css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@ Select desired action
 
       
         
-        </div>
+    </div>
      
        
  <!--footer-->
