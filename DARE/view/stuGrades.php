@@ -68,7 +68,8 @@
     <tr>
     <td>
         <?php
-          echo calculate_grade($pointsEarned, $pointsPossible);
+          $percentage = round(($pointsEarned/$pointsPossible) * 100, 2) . "%";
+          echo calculate_grade($percentage);
         ?>
     </td>
     <td>
@@ -83,7 +84,7 @@
     </td>
     </tr>
   </table>
-  
+
   <?php include 'footer.php'; ?>
 </body>
 </div>
