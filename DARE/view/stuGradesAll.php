@@ -51,18 +51,13 @@
           array_push($percentages, $percent);
 
     }
-    //Get grades for each course and put into array 
+    //Get grades for each course and put into array
     $grades = [];
     foreach($percentages as $percent)
     {
       $grade = calculate_grade($percent);
       array_push($grades, $grade);
     }
-
-
-
-
-
 
   ?>
     <table id="class">
@@ -81,8 +76,6 @@
           }
 
         ?>
-
-
 
     </table>
 <?php include 'footer.php' ?>
