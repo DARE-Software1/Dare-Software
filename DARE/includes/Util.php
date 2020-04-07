@@ -9,7 +9,15 @@ require 'db.php';
 
 class Util
 {
-
+    function getClassId($cname){
+        include './includes/db.php';
+            $sql ="SELECT course_id FROM course WHERE name='$cname'";
+                   $result = mysqli_query($conn, $sql);
+                   while ($row = mysqli_fetch_assoc($result)) {
+                       $cid = $row['course_id'];
+                   return $cid;
+           }
+        }
     function checkUsername($uuname)
     {
 
@@ -69,7 +77,7 @@ class Util
         $c = true;
         while ($c) {
             $pid = rand(111111, 999999);
-            $sql = "SELECT professor_id FROM professr WHERE profesor_id='$pid'";
+            $sql = "SELECT professor_id FROM professor WHERE professor_id='$pid'";
             $result = mysqli_query($conn, $sql);
             $rcheck = mysqli_num_rows($result);
             if ($rcheck > 0) {
@@ -157,4 +165,7 @@ function admin_check($uname){
         return false;
     }
 }
+
+   
+
 }

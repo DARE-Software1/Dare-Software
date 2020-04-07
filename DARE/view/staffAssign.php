@@ -13,8 +13,10 @@
 
 <body>
  <?php include 'header.php' ?>
+ <?php include 'staffNav.php'; 
+ 
   
-  
+ ?>
   
     <!-- add grade\-->
    
@@ -23,32 +25,28 @@
      
     
     <form action='index.php' method="POST">
-           Course ID:<br>
-           <input type="text" name="course_id" placeholder="required"  required="" ><br>
-               Studnent ID:<br>
-        <input type="text" name="student_id" placeholder="required"  required="">
-        
-  <br>
-            <br>
-                   
-                   
-                  Assingment:<br>
-                  <input type="text" name="ass_name" placeholder="" required="" >
-  <br><br>
-                  Points Earned:<br>
-                  <input type="text" name="pe" placeholder=""  required="" >
-                  
-  <br><br>
-  Points Possible:<br>
-                  <input type="text" name="pp" placeholder=""  required="" >
-                  
-  <br><br>
-  Weight:<br>
-                  <input type="text" name="weight" placeholder=""  required="" >
-                  
-  <br><br>
-  <br><input type="hidden" name="action" value="add_ass">
-                        <button type="submit" name='add_ass'>SUBMIT</button><br> 
+           Course Name: <select name="class" id='class'>
+       
+       <?php
+       @session_start();
+       $temp=$_SESSION['sid'];
+       $mysqli= NEW MySQLi('localhost','root','','dare');
+       $results=$mysqli->query("SELECT name FROM course WHERE professor_id='$temp'");
+       
+         while($rows=$results->fetch_assoc())
+{
+            $class_name = $rows['name'];
+            echo"<option  value='$class_name'>$class_name</option>";
+}
+       ?>
+       </select><br>
+           <br><br><br>
+           <?php
+          
+           ?>
+              
+  <br><input type="hidden" name="action" value="chooseClass">
+                        <button type="submit" name='chooseClass'>SUBMIT</button><br> 
    </form>
    
    
@@ -77,5 +75,5 @@
     
     
 <?php include 'view/footer.php' ?>
-
+  
 </html>

@@ -151,6 +151,20 @@ else if($action=='stLogIn'){
      include 'view/staffLogin.php';
  }
 }
+else if($action=='staffHome')
+{
+    include 'view/staffHome.php';
+}
+else if($action=='giveGrade')
+{
+    include 'view/staffAssign.php';
+}
+else if ($action=='classList')
+    {
+$_SESSION['course']=  $_GET["courseId"];
+include 'view/classList.php';
+    }
+
 
 else if ($action == 'addStu') {
 
@@ -196,19 +210,10 @@ else{
 }
 
 else if($action=='staffAssign'){
+    echo 'test';
     include'view/staffAssign.php';
 }
-else if ($action=='add_ass'){
-    $cid = filter_input(INPUT_POST, 'course_id');
-    $sid = filter_input(INPUT_POST, 'student_id');
-    $ass_name = filter_input(INPUT_POST, 'ass_name');
-    $pe = filter_input(INPUT_POST, 'pe');
-    $pp = filter_input(INPUT_POST, 'pp');
-    $weight = filter_input(INPUT_POST, 'weight');
 
-    Util::add_ass($cid,$sid,$ass_name,$pe,$pp,$weight);
-    include'view/staffHome.php';
-}
 
 
 
@@ -237,4 +242,3 @@ else if ($action=='add_stu_to_course'){
  else {
      include('view/home.php');
 }
-?>

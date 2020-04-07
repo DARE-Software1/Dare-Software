@@ -14,6 +14,13 @@
      return $row;
 
   }
+  function getStudents($cid){
+    include 'db.php';
+    $sql= "SELECT first_name,last_name,student_id FROM course_students WHERE course_id='$cid'; ";
+    $results=mysqli_query($conn,$sql);
+    $row = $results -> fetch_all();
+    return $row;
+  }
 
   //This function will return a row in a table with any number of columns
   function get_table_row_elements($element)
@@ -59,4 +66,13 @@
       }
       return $letterGrade;
   }
+  function getClassId($cname){
+    include './includes/db.php';
+        $sql ="SELECT course_id FROM course WHERE name='$cname'";
+               $result = mysqli_query($conn, $sql);
+               while ($row = mysqli_fetch_assoc($result)) {
+                   $cid = $row['course_id'];
+               return $cid;
+       }
+    }
 ?>

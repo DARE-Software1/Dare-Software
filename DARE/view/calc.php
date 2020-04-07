@@ -58,7 +58,7 @@ $results=$mysqli->query("SELECT course_name FROM course_students WHERE student_i
         <br>                 
 
         <input type="submit" name="calcGrade"
-                class="button" value="calcGrade" /> 
+                class="button" value="calcGrade" > 
                
             
         <br> 
@@ -107,5 +107,5 @@ function getPE ($sid, $cname, $pte,$ptp){
    }
 
        ?>
-       
+    
 </html>
