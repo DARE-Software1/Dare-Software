@@ -169,29 +169,26 @@ nav a:hover{
 }
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns:  400px ;
-    grid-template-rows: 250px 250px 250px 250px;
-    grid-gap: 80px;
-    justify-items: center;
-    justify-content: space-evenly;
-    margin-top: 150px;
-    
-  }
+
 
   .grid-container > div
   {
-      padding: 100px;
-  border: darkblue;
+      padding: 70px;
+     border: #3a4460;
   border-style: solid;
   }
   .item1  {
-      background-color: pink ;
+      background: lightblue;
+      background-image:url("../img/Software Engineering.png");
+      background-size:100%;
+      background-repeat: no-repeat;
+      
 
   }
   .item2{
       background-color: lightblue;
+      background-image:url("../img/Algorithms.png");
+      background-size: 100%;
 
   }
   .item3{
@@ -441,13 +438,20 @@ footer {
     }
 
     .grid-container {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        color: black;
+        font:bold;
+        font-size: 20px;
+        text-align: center; 
         display: grid;
         grid-template-columns:  400px 400px ;
         grid-template-rows: 250px 250px;
-        grid-gap: 80px;
+        grid-gap:80px;
         justify-items: center;
         justify-content: space-evenly;
         margin-top: 100px;
+        text-decoration: none;
+
         
     } 
 }  
