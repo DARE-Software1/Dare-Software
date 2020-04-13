@@ -20,7 +20,10 @@
   
     <!-- add grade\-->
    
-    
+    <div class="stuRegi">
+        <div class="stuReg">
+
+        
     
      
     
@@ -45,11 +48,12 @@
           
            ?>
               
-  <br><input type="hidden" name="action" value="chooseClass">
-                        <button type="submit" name='chooseClass'>SUBMIT</button><br> 
+  <br><input type="hidden" name="action" value="giveGrade">
+                        <button type="submit" name='giveGrade'>SUBMIT</button><br> 
    </form>
    
-   
+   </div>
+    </div>
    
    
    

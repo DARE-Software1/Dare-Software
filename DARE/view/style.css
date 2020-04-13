@@ -87,8 +87,7 @@ header h1{
 .admin ul li input.align-right{
     float: right;
 }
-.admin ul li input[type="button"], 
-.admin ul li input[type="submit"]{
+.admin input{
     -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
 	box-shadow: inset 0px 1px 0px 0px #3985B1;
@@ -171,12 +170,35 @@ nav a:hover{
 
 
 
-  .grid-container > div
+  .grid-container div
   {
+    
       padding: 70px;
      border: #3a4460;
   border-style: solid;
   }
+  .grid-container  button{
+   
+    justify-content: center;
+   background-color: #49598C;
+border-radius: 25px;
+color: white;
+padding: 10% ;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+}
+
+.grid-container p{
+ color:white;
+  font-size:22px;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap:hidden;
+ 
+}
+
   .item1  {
       background: lightblue;
       background-image:url("../img/Software Engineering.png");
@@ -336,8 +358,12 @@ background: rgba(0,0,0,.3);
     display: block;
     width: 100%;
 }
-
-
+.select{
+    color:blue;
+}
+.stuReg p{
+    justify-content: right;
+}
 .stuReg input{
     border-top:none;
     border-right:none;

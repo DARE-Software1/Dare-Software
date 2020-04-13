@@ -140,7 +140,8 @@ class Util
             $cna = $row['name'];
         }
 
-        $sql = "INSERT INTO `course_students`(`course_id`, `course_name`, `first_name`, `last_name`, `student_id`) VALUES ('$cid','$cna','$first','$last','$sid')";
+        $sql = "INSERT INTO `course_students`(`course_id`, `course_name`, `first_name`, `last_name`, `student_id`, `id`) 
+        VALUES ('$cid','$cna','$first','$last','$sid', '')";
         mysqli_query($conn, $sql);
     }
 
@@ -150,8 +151,8 @@ class Util
         
         $percent = $pe/$pp;
 $percent_friendly = number_format( $percent * 100, 2 ) . '%';
-        $sql = "INSERT INTO `assignments`(`course_id`, `student_id`, `assignment_name`, `weight`, `pointes_earned`, `points_possible`, `percentage`, `comments`, `due_date`) 
-        VALUES ('$cid','$sid','$ass_name','$weight','$pe','$pp','$percent_friendly','','')";
+        $sql = "INSERT INTO `assignments`(`course_id`, `student_id`, `assignment_name`, `weight`, `pointes_earned`, `points_possible`, `percentage`, `comments`, `due_date`,`id`) 
+        VALUES ('$cid','$sid','$ass_name','$weight','$pe','$pp','$percent_friendly','','','')";
         mysqli_query($conn,$sql);
     }
 function admin_check($uname){

@@ -44,7 +44,7 @@
 <?php include("./includes/functions.php"); ?>
 
 <?php 
-echo $courseId;
+
 $stu = getStudents($courseId);
 foreach($stu as $stus)
 {

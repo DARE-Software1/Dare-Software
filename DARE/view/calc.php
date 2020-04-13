@@ -32,7 +32,10 @@ $mysqli= NEW MySQLi('localhost','root','','dare');
 $results=$mysqli->query("SELECT course_name FROM course_students WHERE student_id='$temp'");
 ?>
 
-    <body>   
+    <body>
+        <div class="stuRegi">
+            <div class= "stuReg">
+         
           <form method="post" > 
         Course Name: <select name="class" id='class'>
        
@@ -46,16 +49,22 @@ $results=$mysqli->query("SELECT course_name FROM course_students WHERE student_i
         </select>
 
            <br>
+           <br>
+           <br>
            
            points earned:
               <input type="number" id='pe' name="points_e"  placeholder=""  ><span> <br></span>
  
         <br>
+        <br>
+        <br>
         
             Points Possible:
                <input type="number" id='pp' name="points_p" placeholder="" required="" >
          
-        <br>                 
+        <br>   
+        <br>
+        <br>              
 
         <input type="submit" name="calcGrade"
                 class="button" value="calcGrade" > 
@@ -64,11 +73,13 @@ $results=$mysqli->query("SELECT course_name FROM course_students WHERE student_i
         <br> 
 
 </form>
-
-Grade: <?php if(!($grade=='null')) {
+            
+       
+<p>Grade: <?php if(!($grade=='null')) {
     echo round($grade*100,2)."%";}
-    ?>
-
+    ?><p>
+</div>
+</div>
 
 
 

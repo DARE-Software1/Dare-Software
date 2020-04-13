@@ -25,7 +25,8 @@
             <div class="container">
 
                 <div class="stuRegi">
-                    <div class="stuReg">
+                    <div class = "stuReg">
+                   
                         <h2>Course Sign-up</h2>
 
                         <form action='index.php' method="POST">
@@ -53,7 +54,7 @@
                             <button type="submit" name='add_course'>SUBMIT</button><br>
                         </form>
 
-                    </div>
+                   
                 </div>
             </div>
 
