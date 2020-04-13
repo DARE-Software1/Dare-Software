@@ -24,7 +24,8 @@
         <div class="overlay">
             <div class="container">
 
-                <div class="admin">
+                <div class="stuRegi">
+                    <div class = "stuReg">
                    
                         <h2>Course Sign-up</h2>
 

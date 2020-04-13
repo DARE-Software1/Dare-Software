@@ -364,8 +364,12 @@ background: rgba(0,0,0,.3);
     display: block;
     width: 100%;
 }
-
-
+.select{
+    color:blue;
+}
+.stuReg p{
+    justify-content: right;
+}
 .stuReg input{
     border-top:none;
     border-right:none;

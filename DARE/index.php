@@ -256,11 +256,11 @@ else if ($action=='add_course'){
 }
 else if ($action=='add_stu_to_course'){
     $cid = filter_input(INPUT_POST, 'coursed_id');
-    $sid = filter_input(INPUT_POST, 'student_id');
+    $sid = filter_input(INPUT_POST, 'student');
 
 
     Util::add_stu_to_course($cid,$sid);
-    include'view/admin.php';
+    include'view/addStuToCourse.php';
 }
  else {
      include('view/home.php');

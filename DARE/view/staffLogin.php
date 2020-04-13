@@ -41,7 +41,7 @@
                         <input type="text" placeholder="Enter Username" name="uid" required>
                         <br>
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="pwd" required>
+                        <input type="password" placeholder="Enter Password" name="pwd" >
                         <br><input type="hidden" name="action" value="stLogIn">
                         <button type="submit" >Login</button><br> 
                         

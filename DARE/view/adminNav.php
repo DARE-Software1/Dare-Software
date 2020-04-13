@@ -4,7 +4,7 @@
 
 
         <li >
-                <a href='/Dare/Dare-Software/DARE/index.php?action=addStu'> Studnet</a>
+                <a href='/Dare/Dare-Software/DARE/index.php?action=addStu'> Student</a>
             </li>
             <li >
                 <a href='/Dare/Dare-Software/DARE/index.php?action=addProf'> Professor</a>

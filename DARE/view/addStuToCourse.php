@@ -32,7 +32,23 @@
            Course ID:<br>
            <input type="text" name="coursed_id" placeholder="required"  required="" ><br>
                Student ID:<br>
-        <input type="text" name="student_id" placeholder="required"  required="">
+               <select name='student' id='student'>
+
+<?php
+
+
+
+$mysqli = new MySQLi('localhost', 'root', '', 'dare');
+$results = $mysqli->query("SELECT first_name, last_name,student_id FROM student");
+
+while ($rows = $results->fetch_assoc()) {
+    $first = $rows['first_name'];
+    $last = $rows['last_name'];
+    $id = $rows['student_id'];
+    echo "<option value='$id'>$first $last</option>";
+}
+?>
+</select>
         
  
   <br><input type="hidden" name="action" value="add_stu_to_course">
