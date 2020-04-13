@@ -4,7 +4,7 @@
   {
     include("db.php");
 
-    $query="SELECT assignment_name, pointes_earned, points_possible, weight, percentage
+    $query="SELECT assignment_name, pointes_earned, points_possible,  percentage
     FROM assignments
     WHERE student_id = $stuId && course_id = $courseId";    //another mysql code stirng
 

@@ -151,13 +151,35 @@ else if($action=='stLogIn'){
      include 'view/staffLogin.php';
  }
 }
+else if ($action=='add_ass'){
+    session_start();
+     $cid = filter_input(INPUT_POST, 'class');
+     $sid = filter_input(INPUT_POST, 'student');
+     $ass_name = filter_input(INPUT_POST, 'ass_name');
+     $pe = filter_input(INPUT_POST, 'pe');
+     $pp = filter_input(INPUT_POST, 'pp');
+     $weight = '';
+     $_SESSION['test']=$sid;
+ $ciid=Util::getClassId($cid);
+     Util::add_ass($ciid,$sid,$ass_name,$pe,$pp,$weight);
+     
+     
+ 
+   
+ }
 else if($action=='staffHome')
 {
     include 'view/staffHome.php';
 }
-else if($action=='giveGrade')
+else if($action=='staffAssign')
 {
     include 'view/staffAssign.php';
+}
+else if($action=='giveGrade')
+{
+   @session_start();
+    $_SESSION['curCourse']=filter_input(INPUT_POST,'class');
+    include 'view/giveGrade.php';
 }
 else if ($action=='classList')
     {

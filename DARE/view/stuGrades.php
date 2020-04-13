@@ -36,7 +36,7 @@
         <th>Assignment</th>
         <th>Points Earned</th>
         <th>Points Possible</th>
-        <th>Weight</th>
+     
         <th> Percentage</th>
     </tr>
 
