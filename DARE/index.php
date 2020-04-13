@@ -164,6 +164,7 @@ else if ($action=='add_ass'){
      Util::add_ass($ciid,$sid,$ass_name,$pe,$pp,$weight);
      
      
+     include'view/giveGrade.php';
  
    
  }
