@@ -177,27 +177,6 @@ nav a:hover{
      border: #3a4460;
   border-style: solid;
   }
-  .grid-container  button{
-   
-    justify-content: center;
-   background-color: #49598C;
-border-radius: 25px;
-color: white;
-padding: 10% ;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 17px;
-}
-
-.grid-container p{
- color:white;
-  font-size:22px;
-  justify-content: center;
-  text-align: center;
-  overflow-wrap:hidden;
- 
-}
 
   .item1  {
       background: lightblue;
