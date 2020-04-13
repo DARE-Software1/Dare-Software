@@ -168,33 +168,14 @@ nav a:hover{
 }
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns:  400px ;
-    grid-template-rows: 250px 250px 250px 250px;
-    grid-gap: 80px;
-    justify-items: center;
-    justify-content: space-evenly;
-    margin-top: 150px;
-    
-  }
+
 
   .grid-container div
   {
-      padding-left:15%;
-      padding-right: 15%;
-      padding-bottom: 30%;
-      padding-top: 0;
-      
-   background:linear-gradient(132deg,rgba(199,89,215,1) 0%, 48%,rgba(00,100,100,1) 100%); 
-font-size: 20px;
-      align-content: center;
-      border-radius: 40px;
-      min-width: 40px;
-      max-height: 40px;
-      color:white;
-      align-content: center;
-        justify-content: center;
+    
+      padding: 70px;
+     border: #3a4460;
+  border-style: solid;
   }
   .grid-container  button{
    
@@ -219,19 +200,32 @@ font-size: 17px;
 }
 
   .item1  {
-      background-color: pink ;
+      background: lightblue;
+      background-image:url("../img/Software Engineering.png");
+      background-size:100%;
+      background-repeat: no-repeat;
+      
 
   }
   .item2{
       background-color: lightblue;
+      background-image:url("../img/Algorithms.png");
+      background-size: 100%;
 
   }
   .item3{
       background-color: lightgreen;
+      background-image:url("../img/languages.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
 
   }
   .item4{
       background-color: lightcoral;
+      background-image:url("../img/globe.png.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat; 
+      
   }
   table {
     border-collapse: collapse;
@@ -403,14 +397,16 @@ table {
 }
 
 #class td, #class th { 
-    border: 1px solid #ddd;
+    font-size: 18px; 
+    border: 2px solid #ddd;
     padding: 8px; 
-    height: 85px;
+    height: 75px;
     
 }
 
 #class th { 
-    padding-top:8px;
+    font-size: 20px;
+    padding-top:6px;
     padding-bottom:8px;
     text-align: left;
     background: #3a4460;
@@ -477,13 +473,20 @@ footer {
     }
 
     .grid-container {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        color: black;
+        font:bold;
+        font-size: 20px;
+        text-align: center; 
         display: grid;
         grid-template-columns:  400px 400px ;
         grid-template-rows: 250px 250px;
-        grid-gap: 80px;
+        grid-gap:80px;
         justify-items: center;
         justify-content: space-evenly;
         margin-top: 100px;
+        text-decoration: none;
+
         
     } 
 }  
