@@ -193,10 +193,17 @@ nav a:hover{
   }
   .item3{
       background-color: lightgreen;
+      background-image:url("../img/languages.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
 
   }
   .item4{
       background-color: lightcoral;
+      background-image:url("../img/globe.png.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat; 
+      
   }
   table {
     border-collapse: collapse;
@@ -364,14 +371,16 @@ table {
 }
 
 #class td, #class th { 
-    border: 1px solid #ddd;
+    font-size: 18px; 
+    border: 2px solid #ddd;
     padding: 8px; 
-    height: 85px;
+    height: 75px;
     
 }
 
 #class th { 
-    padding-top:8px;
+    font-size: 20px;
+    padding-top:6px;
     padding-bottom:8px;
     text-align: left;
     background: #3a4460;
