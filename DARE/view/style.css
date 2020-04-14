@@ -195,20 +195,23 @@ nav a:hover{
   }
   .item2{
       background-color: lightblue;
-      background-image:url("../img/Algorithms.png");
+      background-image:url("../img/globe.png.jpg");
+      
       background-size: 100%;
 
   }
   .item3{
       background-color: lightgreen;
-      background-image:url("../img/languages.jpg");
+      background-image:url("../img/Algorithms.png");
       background-size: 100%;
       background-repeat: no-repeat;
 
   }
   .item4{
       background-color: lightcoral;
+
       background-image:url("../img/globe.png");
+
       background-size: 100%;
       background-repeat: no-repeat; 
   }
